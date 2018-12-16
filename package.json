@@ -1,0 +1,24 @@
+{
+  "name": "coderetreat",
+  "version": "1.0.0",
+  "description": "+ Conway's Game of Life :D",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foopod/coderetreat.git"
+  },
+  "keywords": [],
+  "author": "Jono Shields <jonathonshields@gmail.com> (https://jonoshields.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foopod/coderetreat/issues"
+  },
+  "homepage": "https://github.com/foopod/coderetreat#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
