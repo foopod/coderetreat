@@ -1,5 +1,5 @@
-var calculate = function(isAlive, numberOfAliveNeighbours) {
+var isAlive = function(isAliveCurrently, numberOfAliveNeighbours) {
     return true;
 }
 
-module.exports = calculate;
+module.exports = isAlive;
