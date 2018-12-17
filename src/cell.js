@@ -1,22 +1,13 @@
-var isAlive = function(isAliveCurrently, numberOfAliveNeighbours) {
-    return !(numberOfAliveNeighbours < 2 || numberOfAliveNeighbours > 3)
-}
-
-var getAliveNeighbours = function(neighbourGrid){
-    return 0;
-}
-
 module.exports = {
-    isAlive: function(isAliveCurrently, numberOfAliveNeighbours) {
-        return !(numberOfAliveNeighbours < 2 || numberOfAliveNeighbours > 3)
+    isAlive: function(currentState, numberOfNeighbours) {
+        return !((numberOfNeighbours > 3 || numberOfNeighbours < 2) || (!currentState && numberOfNeighbours != 3));
     },
-    
-    getAliveNeighbours: function(neighbourGrid) {
-        count=0;
-        for(i = 0; i< 3; i++) {
-            for (j = 0; j<3; j++) {
-                if (!(i == 1 && j == 1)) { 
-                if (neighbourGrid[i][j]) count++;
+    countNeighbours: function(seed){
+        var count = 0;
+        for(var x = 0; x < seed.length; x++){
+            for(var y = 0; y < seed[x].length; y++){
+                if(!(y ===1 && x ===1) && seed[x][y] === 1){
+                    count++;
                 }
             }
         }
