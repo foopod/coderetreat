@@ -74,5 +74,16 @@ describe('create a 3x3 subgrid around a given cell', function() {
     assert.equal(false, getSubGrid(0,0, testGrid)[0][0]);
     assert.equal(false, getSubGrid(0,0, testGrid)[0][1]);
     assert.equal(false, getSubGrid(0,0, testGrid)[1][0]);
+   });
+  it('the values of the subgrid match that of the grid', function(){
+    assert.equal(true, getSubGrid(1,1, testGrid)[0][0]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[0][1]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[0][2]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[1][0]);
+    assert.equal(false, getSubGrid(1,1, testGrid)[1][1]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[1][2]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[2][0]);
+    assert.equal(true, getSubGrid(1,1, testGrid)[2][1]);
+    assert.equal(false, getSubGrid(1,1, testGrid)[2][2]);
   });
 });
