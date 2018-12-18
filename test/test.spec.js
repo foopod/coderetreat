@@ -4,7 +4,7 @@ var countNeighbours = mymethods.countNeighbours;
 
 
 var assert = require('assert');
-describe('isAlive', function() {
+describe('determine if cell should come to life, stay alive/dead or die', function() {
   it('stays alive if has 2 or 3 neighbours alive', function(){
     assert.equal(true, isAlive(true, 2));
     assert.equal(true, isAlive(true, 3));
@@ -28,7 +28,7 @@ describe('isAlive', function() {
   });
 });
 
-describe('count neighbours',function(){
+describe('count a cells alive neighbours',function(){
   it('return 0 if seed has no neighbours',()=>{
     var seed = [[0,0,0], [0,0,0], [0,0,0]];
     assert.equal(0, countNeighbours(seed));
