@@ -1,8 +1,5 @@
-var cell = require('../src/cell')
-var isAlive = cell.isAlive;
-var countNeighbours = cell.countNeighbours;
-var getSubGrid = cell.getSubGrid;
-
+// var cell = require('../src/cell');
+import { isAlive, countNeighbours, getSubGrid  } from 'cell';
 
 var assert = require('assert');
 describe('determine if cell should come to life, stay alive/dead or die', function() {
